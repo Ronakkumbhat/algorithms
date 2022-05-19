@@ -38,6 +38,11 @@ void sch(int n)
 {
     int p=1;
     node *t=root;
+    if(t==NULL)
+    {
+        cout<<"\n tree is empty!";
+        return;
+    }
     while(t->data!=n && (t->lc!=NULL || t->rc!=NULL))
     {
 
@@ -388,21 +393,49 @@ int main()
         {
             case 1:
                     int n;
+                    if(root==NULL)
+                    {
+                        cout<<"\n tree is empty!";
+                    }
+                    else{
                     cout<<"\nenter the key:";
                     cin>>n;
                     sch(n);
+                    }
                     break;
             case 2:
+                    if(root==NULL)
+                    {
+                        cout<<"\n tree is empty!";
+                    }
+                    else{
                     predecessor();
+                    }
                     break;
             case 3:
+                    if(root==NULL)
+                    {
+                        cout<<"\n tree is empty!";
+                    }
+                    else{
                     successor();
+                    }
                     break;
             case 4:
-                    min();
+                    if(root==NULL)
+                    {
+                        cout<<"\n tree is empty!";
+                    }
+                    else{
+                    min();}
                     break;
             case 5:
-                    max();
+                    if(root==NULL)
+                    {
+                        cout<<"\n tree is empty!";
+                    }
+                    else{
+                    max();}
                     break;
             case 6:
                     cout<<"\nenter the size:";
@@ -414,15 +447,25 @@ int main()
                     }
                     break;
             case 7:
-                    del();
+                    if(root==NULL)
+                    {
+                        cout<<"\n tree is empty!";
+                    }
+                    else{
+                    del();}
                     break;
             case 8:
+                    if(root==NULL)
+                    {
+                        cout<<"\n tree is empty!";
+                    }
+                    else{
                     cout<<"\nPREORDER:";
                     preorder(root);
                     cout<<"\nINORDER:";
                     inorder(root);
                     cout<<"\nPOSTORDER:";
-                    postorder(root);
+                    postorder(root);}
                     break;
 
         }
